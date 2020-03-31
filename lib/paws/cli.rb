@@ -9,9 +9,7 @@ end
 def list_dogs
    puts "Welcome to PAWS adoptable dogs!"
    puts "\nHere are dogs available for adoption"
-   puts "1. Arlo"
-   puts "2. Milo"
-   puts "3. Zoey"
+   Paws::Dog.all
 end
 
  def menu
@@ -28,12 +26,14 @@ end
      puts "Detailed information on 3..."
    when "list"
     list_dogs
+   else 
+     puts "I'm sorry, please enter a valid request."
    end
  end
 end
  
  def goodbye
-   puts "Thanks for visiting.  See you later."
+   puts "Thanks for visiting.  See you later.  WOOF!"
  end
    
  
