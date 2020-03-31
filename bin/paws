@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require "./lib/paws"
+
+Paws::CLI.new.call
+
+
+

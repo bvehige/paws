@@ -1,6 +1,4 @@
-require "paws/version"
+require_relative "./paws/version"
+require_relative "./paws/cli"
 
-module Paws
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
