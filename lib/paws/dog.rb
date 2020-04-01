@@ -1,6 +1,6 @@
 class Paws::Dog 
 
-attr_accessor :name, :breed, :sex, :size, :color, :bio 
+attr_accessor :name, :breed, :gender, :size, :color, :bio, :age, :species, :spayed_neutered  
 
 def self.all 
    #puts "1. Arlo"
@@ -10,7 +10,7 @@ def self.all
   dog_1 = self.new 
   dog_1.name = "Arlo"
   dog_1.breed = "Labrador Retriever"
-  dog_1.sex = "Male"
+  dog_1.gender = "Male"
   dog_1.size = "Medium"
   dog_1.color = "Black"
   dog_1.bio = "Arlo is a super playful and fun black lab."
