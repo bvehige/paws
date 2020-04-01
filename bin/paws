@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 require "./lib/paws"
 
-Paws::Paws_scraper.new.dog_scraper
-#Paws::CLI.new.call
+Paws::CLI.new.call
 
 
 

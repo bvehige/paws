@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
+#require 'pry'
 
 require_relative "./paws/version"
 require_relative "./paws/cli"
