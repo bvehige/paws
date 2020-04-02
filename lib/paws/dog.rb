@@ -4,8 +4,10 @@ attr_accessor :name, :breed, :gender, :size, :color, :bio, :age, :species, :spay
 
 @@all = []
 
-def initialize(name)
-  @name = name 
+def initialize(name, bio)
+  @name = name
+  #@gender = gender
+  @bio = bio
   save
 end
 
