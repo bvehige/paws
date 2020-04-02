@@ -14,7 +14,7 @@ def self.dog_scraper
   dog.each do |n|
     name = n.css("h3.card-block__title").text
     #gender = n.css("h3.span.card-block__label").text
-    bio = n.css("span.card-block__label").text
+    bio = n.css("span.card-block__label").text.strip
     Paws::Dog.new(name, bio)
   end
   end

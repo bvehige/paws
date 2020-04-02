@@ -16,22 +16,21 @@ end
 def list_dogs
   puts "Welcome to PAWS adoptable dogs!"
    puts "\nHere are dogs available for adoption"
-   binding.pry
    @dogs.each.with_index(1) do |dog, i|
-     puts "#{i}. #{dog.name} - #{dog.breed}" 
+     puts "#{i}. #{dog.name}-" 
    end
 end
 
  def menu
   input = nil 
-  while input != "exit" 
+  until input == "exit" 
    puts "\nPlease enter the number of the dog you'd like more information about.  Type list to see the main list again.  Or type exit to #end"
    input = gets.strip
    
    if input.to_i > 0 
     the_dog = @dogs[input.to_i-1]
      puts "#{the_dog.name}"
-     #puts "#{the_dog.breed}"
+     puts "#{the_dog.bio}"
      #puts "#{the_dog.sex}"
      #puts "#{the_dog.size}"
      #puts "#{the_dog.color}"
@@ -44,9 +43,9 @@ end
    ##when "3"
      ##puts "Detailed information on 3..."
    elsif input == "list"
-    #list_dogs
-   else 
-     puts "I'm sorry, please enter a valid request."
+    list_dogs
+   else  
+     puts "Please enter a valid request"
    end
  end
 end
