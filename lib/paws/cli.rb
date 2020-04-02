@@ -18,34 +18,27 @@ def list_dogs
    puts "\nHere are dogs available for adoption"
    @dogs.each.with_index(1) do |dog, i|
      puts "#{i}. #{dog.name}-" 
-   end
+ end
 end
 
  def menu
   input = nil 
   until input == "exit" 
-   puts "\nPlease enter the number of the dog you'd like more information about.  Type list to see the main list again.  Or type exit to #end"
+   puts "\nPlease enter the number of the dog you'd like more information about."  
+   puts "Type 'list' to see the main list again.  Or type 'exit' to end"
    input = gets.strip
    
    if input.to_i > 0 
     the_dog = @dogs[input.to_i-1]
      puts "Dog's Name:  #{the_dog.name}"
-     puts "Dog's Bio:  #{the_dog.bio}"
+     puts "Dog's Bio:   #{the_dog.bio}"
      #puts "#{the_dog.sex}"
      #puts "#{the_dog.size}"
      #puts "#{the_dog.color}"
      #puts "#{the_dog.bio}"
-   ##case input
-   ##when "1"
-     ##puts "Detailed information on 1..."
-   ##when "2"
-     ##puts "Detailed information on 2..."
-   ##when "3"
-     ##puts "Detailed information on 3..."
+   
    elsif input == "list"
     list_dogs
-   else  
-     puts "Please enter a valid request"
    end
  end
 end
