@@ -19,11 +19,13 @@ def self.dog_scraper
     bio = n.css("span.card-block__label").text.gsub("   "," ")
     Paws::Dog.new(name, bio, url)
   end
+  
   end
-  #dog.name = dogs  
-  #:breed, :gender, :size, :color, :bio, :age, :species, :spayed_neutered 
+
    
    def self.scrape_desc(dog)
+     #not sure where to call this method from? 
+     
      url = "https://www.paws.org/adopt/dogs/#{dog.url}"
      doc = Nokogiri::HTML(open(url))
      info = doc.css("span.pet-info__dsc")

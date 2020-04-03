@@ -19,7 +19,7 @@ def self.all
 end
 
 def get_dog_desc
-  Paws::Paws_scraper.scrape_desc(self) if @desc.empty?
+  Paws::Paws_scraper.scrape_desc(self)
 end
 
 def save 
