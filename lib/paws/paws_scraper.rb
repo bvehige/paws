@@ -16,10 +16,9 @@ def self.dog_scraper
     name = n.css("div.petgrid-name").text
     basics = n.css("ul.feature-ul").text
     breed = n.css("div.pet-breeds").text
-    additional = n.css("div.pet-options").text
-    desc = n.css("div.description").text
+    additional = n.css("div.pet-options").text.strip
+    desc = n.css("div.description").text.strip.gsub("-", "").gsub(":", "")
     #url = n.css("a.card-block__link").attr("href")
-    #gender = n.css("h3.span.card-block__label").text
     #bio = n.css("span.card-block__label").text.gsub("   "," ")
     Paws::Dog.new(name, basics, breed, additional, desc)
   end

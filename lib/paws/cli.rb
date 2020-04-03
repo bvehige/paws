@@ -30,9 +30,9 @@ end
    
    if input.to_i > 0 
     the_dog = @dogs[input.to_i-1]
-     puts "Dog's Name: #{the_dog.name}"
-     puts "#{the_dog.basics}"
-     puts "#{the_dog.breed}"
+     puts "Dog's Name:  #{the_dog.name}"
+     puts "Basic Info:  #{the_dog.basics}"
+     puts "Dog's Breed: #{the_dog.breed}"
      puts "#{the_dog.additional}"
      puts "#{the_dog.desc}"
      #puts "#{the_dog.bio}"
