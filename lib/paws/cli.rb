@@ -2,7 +2,6 @@ class Paws::CLI
 
 def call
 puts "Welcome to PAWS adoptable dogs!".colorize(:light_blue).bold
-
 get_dogs 
 list_dogs
 menu
@@ -35,7 +34,6 @@ end
      puts "Dog's#{the_dog.breed}".colorize(:green)
      puts "#{the_dog.additional}".colorize(:green)
      puts "#{the_dog.desc}".colorize(:green)
-     #puts "#{the_dog.bio}"
    
    elsif input == "list"
     list_dogs

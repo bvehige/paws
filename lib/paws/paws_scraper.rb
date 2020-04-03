@@ -1,5 +1,3 @@
-#require 'pry'
-#require 'Nokogiri'
 
 class Paws::Paws_scraper
 
@@ -9,17 +7,14 @@ def self.dog_scraper
   doc = Nokogiri::HTML(open(url))
   
   section = doc.css("div.petgrid-container.Dog")
-  #dog = section.css("article.card-block__item")
-  #url = section.css("a.card-block__link").attr("href")
-  #dog_name = dog.css("h3.card-block__title")
+  #url = section.css("a.card-block__link").attr("href") - was going to try to go to a second level webpage.  
   section.each do |n|
     name = n.css("div.petgrid-name").text
     basics = n.css("ul.feature-ul").text
     breed = n.css("div.pet-breeds").text
     additional = n.css("div.pet-options").text.strip
     desc = n.css("div.description").text.strip.gsub("-", "").gsub(":", "")
-    #url = n.css("a.card-block__link").attr("href")
-    #bio = n.css("span.card-block__label").text.gsub("   "," ")
+    #url = n.css("a.card-block__link").attr("href") - was going to try and go to a second level webpage.  
     Paws::Dog.new(name, basics, breed, additional, desc)
   end
   
@@ -27,6 +22,7 @@ def self.dog_scraper
 
    
    def self.scrape_desc(dog)
+     #was going to try to use this method to scrape from a second level webpage. 
      #not sure where to call this method from? 
      
      url = "https://www.paws.org/adopt/dogs/#{dog.url}"

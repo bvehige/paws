@@ -1,6 +1,6 @@
 class Paws::Dog 
 
-attr_accessor :name, :breed, :gender, :size, :color, :bio, :age, :species, :additional, :url, :desc, :basics  
+attr_accessor :name, :breed, :additional, :url, :desc, :basics  
 
 @@all = []
 
@@ -8,7 +8,6 @@ def initialize(name, basics, breed, additional, desc)
   @name = name
   @basics = basics
   @url = url 
-  @bio = bio
   @desc = desc
   @breed = breed
   @additional = additional
@@ -22,6 +21,7 @@ def self.all
 end
 
 def get_dog_desc
+  #was going to try and get a more detailed desc from a second level webpage
   Paws::Paws_scraper.scrape_desc(self)
 end
 
