@@ -1,7 +1,7 @@
 class Paws::CLI 
 
 def call
-puts "Welcome to PAWS adoptable dogs!".colorize(:light_blue).bold
+puts "Welcome to the Whatcom County Animal Shelter adoptable dogs!".colorize(:light_blue).bold
 get_dogs 
 list_dogs
 menu
@@ -42,7 +42,7 @@ end
 end
  
  def goodbye
-   puts "Thanks for visiting.  See you later.  WOOF!".colorize(:light_blue)
+   puts "Thanks for visiting.  WOOF, WOOF!".colorize(:light_blue)
  end
    
  
