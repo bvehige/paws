@@ -17,7 +17,7 @@ end
 def list_dogs
    puts "\nHere are dogs available for adoption"
    @dogs.each.with_index(1) do |dog, i|
-     puts "#{i}. #{dog.name}-" 
+     puts "#{i}. #{dog.name}" 
  end
 end
 
@@ -30,11 +30,11 @@ end
    
    if input.to_i > 0 
     the_dog = @dogs[input.to_i-1]
-     puts "Dog's Name:  #{the_dog.name}"
-     puts "Dog's Bio:   #{the_dog.bio}"
+     puts "Dog's Name: #{the_dog.name}"
+     puts "#{the_dog.basics}"
+     puts "#{the_dog.breed}"
+     puts "#{the_dog.additional}"
      puts "#{the_dog.desc}"
-     #puts "#{the_dog.size}"
-     #puts "#{the_dog.color}"
      #puts "#{the_dog.bio}"
    
    elsif input == "list"

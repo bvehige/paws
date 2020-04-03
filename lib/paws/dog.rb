@@ -1,14 +1,17 @@
 class Paws::Dog 
 
-attr_accessor :name, :breed, :gender, :size, :color, :bio, :age, :species, :spayed_neutered, :url, :desc  
+attr_accessor :name, :breed, :gender, :size, :color, :bio, :age, :species, :additional, :url, :desc, :basics  
 
 @@all = []
 
-def initialize(name, bio, url)
+def initialize(name, basics, breed, additional, desc)
   @name = name
+  @basics = basics
   @url = url 
   @bio = bio
   @desc = desc
+  @breed = breed
+  @additional = additional
   save
 end
 
