@@ -8,3 +8,4 @@ require_relative "./paws/paws_scraper"
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require 'colorize'
