@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Brian Vehige'"]
   spec.email         = ["'brianvehige@gmail.com'"]
 
-  spec.summary       = %q{A list of available dogs to adopt from PAWS.}
-  spec.description   = %q{A list of available dogs to adopt from PAWS, including details and a bio.}
+  spec.summary       = %q{A list of available dogs to adopt from the Whatcom County Animal Shelter.}
+  spec.description   = %q{A list of available dogs to adopt from the Whatcom County Animal Shelter, including details.}
   spec.homepage      = "https://www.hello.com"
   spec.license       = "MIT"
 
