@@ -34,6 +34,15 @@ end
      puts "Dog's#{the_dog.breed}".colorize(:green)
      puts "#{the_dog.additional}".colorize(:green)
      puts "#{the_dog.desc}".colorize(:green)
+     puts ""
+     puts "If you're interested in meeting#{the_dog.name}please contact:".colorize(:light_blue) 
+     puts "Whatcom Humane Society".colorize(:blue)
+     puts "Shelter Hours & Info".colorize(:blue)
+     puts "2172 Division Street".colorize(:blue)
+     puts "Bellingham, WA 98226".colorize(:blue)
+     puts "(360) 733-2080".colorize(:blue)
+     puts "https://www.whatcomhumane.org/adopt/".colorize(:blue)
+         
    
    elsif input == "list"
     list_dogs
