@@ -16,7 +16,7 @@ end
 
 def self.all 
   Paws::Paws_scraper.dog_scraper
-  @@all 
+  @@all.sort_by{|dog|dog.name}
 end
 
 def save 
