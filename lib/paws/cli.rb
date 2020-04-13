@@ -1,12 +1,11 @@
 class Paws::CLI 
 
 def call
-puts "Welcome to the Whatcom County Animal Shelter adoptable dogs!".colorize(:light_blue).bold
-get_dogs 
-list_dogs
-menu
-goodbye
-
+  puts "Welcome to the Whatcom County Animal Shelter adoptable dogs!".colorize(:light_blue).bold
+  get_dogs 
+  list_dogs
+  menu
+  goodbye
 end
 
 def get_dogs
@@ -16,7 +15,7 @@ end
 def list_dogs
    puts "\nHere's a list of dogs available for adoption:".colorize(:light_blue).underline
    @dogs.each.with_index(1) do |dog, i|
-     puts "#{i}. #{dog.name}".colorize(:green) 
+   puts "#{i}. #{dog.name}".colorize(:green) 
  end
 end
 
@@ -43,7 +42,6 @@ end
      puts "(360) 733-2080".colorize(:blue)
      puts "https://www.whatcomhumane.org/adopt/".colorize(:blue)
          
-   
    elsif input == "list"
     list_dogs
    end
@@ -54,5 +52,4 @@ end
    puts "Thanks for visiting.  WOOF, WOOF!".colorize(:light_blue)
  end
    
- 
 end
